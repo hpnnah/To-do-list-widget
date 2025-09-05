@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+
+  height: 500px;
+  font-family: "Pixellari.ttf";
+  background-color: #65DAEC;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+/*This is where the progress bar, date, input task and submit
+button will be placed into*/
+.tophalfdiv {
+  width: 440px;
+  height: 220px;
+  border: 5px;
+  border-style: solid;
+  border-radius: 25px;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-color: #3E8691;
+
+
+}
+/* This is where all the tasks will be 
+whenever a new task is submitted*/
+.bottomhalfdiv {
+  width: 440px;
+  height: 220px;
+
+  border: 5px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /*tasks are kept inside*/
+
+}
+.tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.task {
+ /*What a new task created would look likes*/
+  height: 50px;
+  border-style:solid;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #3E8691;;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-color: white;
+  color: white;
+
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto ;
+  overflow-x: hidden;
+  scrollbar-color: grey;
+  scrollbar-width: thin;
+  padding-right: 5px;
+
+}
+
+.date_text {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  left: 5%;
+  border-style: solid;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3E8691;
+  border-color: white;
+  color: white;
+}
+
+.current_date {
+  width: 100px;
+  height: 80px;
+  font-size: 13px;
+  position: absolute;
+  top: 50px;
+  left: 7.25%;
+  border-style: solid;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  background-color: #3E8691;
+  border-color: white;
+  color: white;
+}
+
+.current_date p {
+  margin: 0;
+}
+
+.progress {
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 35%;
+  border-style: solid;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border-color: white;
+
+}
+
+.progress_movement {
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: grey;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+  position: absolute;
+  color: white;
+}
+.progress_label {
+  width: 200px;        
+  position: absolute;
+  top: 40px;           
+  left: 70%;        
+  transform: translateX(-50%);
+  text-align: center;       
+  font-weight: bold;
+  color: white;
+}
+
+.check_button , 
+.cross_button{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display:flex;
+  align-items:  center;
+  justify-content: center;
+}
+
+.check_button img{
+
+  width: 20px;
+  height: 20px;
+
+}
+.cross_button img{
+
+  width: 20px;
+  height: 20px;
+
+}
+.enter_task {
+  width: 220px;
+  height: 50px;
+  top: 150px;
+  left: 5%;
+  display: flex;
+  position: absolute;
+  border-style: solid;
+  border-radius: 15px;
+  background-color: #3E8691;
+  border-color: white;
+}
+
+
+.enter_task input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.submit_button {
+  width: 60px;
+  height: 40px;
+  top: 155px;
+  left: 60%;
+  position: absolute;
+  border-style: solid;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #3E8691;
+  border-color: white;
+  color: white;
+}

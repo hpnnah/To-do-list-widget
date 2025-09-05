@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>To-do-List</title>
+
+  
+</head>
+<body>
+<!-- The body contains the top half and bottom half of the opage that includes
+ the tasks, progress, buttons and date-->
+  <h1>To do list </h1>
+
+
+<div class = "tophalfdiv">
+    <div class = "date_text">
+      <p> Date</p>
+    </div>
+    <div class = "current_date">
+      <p id = "dayName"> </p>
+      <p id = "dayNumber"> </p>
+      <p id = "monthName"> </p>
+    </div>
+    <div class = "progress_label">
+      <p>Progress!</p>
+    </div>
+    <div class = "progress">
+      <div class = "progress_movement" id="progress_movement"> </div>
+    </div>
+    <div class = "enter_task">
+      <input type = "text" id = "ftask" name = "ftask" placeholder="Enter task"><br><br>
+    </div>
+    <button class = "submit_button" onclick = 'addTask()'> Submit
+    </button>
+
+    <div class = ""> </div>
+
+    </div>
+
+</div>
+
+  <div class = "bottomhalfdiv">
+    <blockquote class = "scroll">
+      <div class = "tasks">
+
+      </div>
+    </blockquote>
+  </div>  
+  <script src="script.js"></script> <!--Allows access to the JS script-->
+</body>
+</html>
